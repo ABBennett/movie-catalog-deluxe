@@ -10,7 +10,7 @@
 
     <% @actor.each do |role| %>
 
-        <li> <%= role["title"] %>: <%= role["character"] %> </li>
+        <li> <a href="/movies/<%= role["movie_id"] %>"><%= role["title"] %></a>: <%= role["character"] %> </li>
         <br>
     <% end %>
     </ol>

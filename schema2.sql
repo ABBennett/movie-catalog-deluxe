@@ -44,7 +44,7 @@ CREATE TABLE genres (
 
 CREATE TABLE studios (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
+  name VARCHAR(255),
   created_at TIMESTAMP,
   update_at TIMESTAMP
 );

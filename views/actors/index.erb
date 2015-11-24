@@ -7,20 +7,19 @@
 
   <body>
     <h1>Actors</h1>
+    <h5><a href="/movies">Go to Movies</a></h5>
 <ul>
     <% @actors.each do |actor|%>
+
       <li>
           <ul>
-            <li><a href="/actors/<%= actor["name"]%>"><%= actor["name"]%></a></li>
-            
+            <li><a href="/actors/<%= actor["actor_id"]%>"><%= actor["name"]%></a></li>
+
 
           </ul>
       </li>
     <%end%>
 </ul>
-
-    <h5><a href="/actors/new">SUBMIT NEW ARTICLE</a></h5>
-
 
     </form>
   </body>

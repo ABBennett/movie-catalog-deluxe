@@ -33,6 +33,8 @@ feature 'user sees movie details' do
 
   scenario 'sees a movie with their year, rating, genre, and studio' do
     visit "/movies/1"
+    
+
     expect(page).to have_content("The Hunger Games: Catching Fire")
     expect(page).to have_content("2013")
     expect(page).to have_content("100")
@@ -52,4 +54,3 @@ feature 'user sees movie details' do
     expect(page).to have_css("a[href='/actors/1']")
   end
 end
-
