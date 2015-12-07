@@ -2,19 +2,40 @@
 <html>
   <head>
     <title>Basic HTML Page</title>
-    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
   </head>
 
   <body>
     <h1>Movies</h1>
-    
-<ul>
-    <% @movies.each do |info|%>
 
-      <li><a href="/movies/<%= info["movie_id"]%>"><%= info["title"]%></a> (<%= info["studio"] %> <%= info["year"] %>) rating: <%= info["rating"] %> genre: <%= info["genre"] %></li>
+  <div id="movie-container">
+    <table>
+      <thead>
+        <tr>
+          <th width="20">No</th>
+          <th>Title</th>
+          <th width="100">Rating</th>
+          <th width="150">Genre</th>
+          <th width="150">Studio</th>
+        </tr>
+      </thead>
 
-    <%end%>
-</ul>
+      <tbody>
+          <% count = 0 %>
+          <% @movies.each do |info|%>
+            <tr>
+              <td><%= count %></td>
+              <td><a href="/movies/<%= info["movie_id"]%>"><%= info["title"]%></a></td>
+              <td class='rating'><%= info["rating"] %></td>
+              <td><%= info["genre"] %></td>
+              <td><%= info["studio"] %> <%= info["year"] %></td>
+            </tr>
+            <% count += 1 %>
+          <%end%>
+      </tbody>
+    </table>
+  </div>
 
     </form>
   </body>

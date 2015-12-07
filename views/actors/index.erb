@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Basic HTML Page</title>
-    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+    <link
   </head>
 
   <body>
@@ -14,13 +15,14 @@
       <li>
           <ul>
             <li><a href="/actors/<%= actor["actor_id"]%>"><%= actor["name"]%></a></li>
-
-
           </ul>
       </li>
     <%end%>
 </ul>
 
     </form>
+
+    <script src="/js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="/js/sprouts.js"></script>
   </body>
 </html>

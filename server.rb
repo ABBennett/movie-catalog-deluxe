@@ -60,6 +60,7 @@ get '/movies' do
     ON movies.genre_id = genres.id
     LEFT JOIN studios
     ON movies.studio_id = studios.id
+    ORDER BY movies.title
    ")
   end
 

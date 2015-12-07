@@ -1,0 +1,25 @@
+#movie-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+a {
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  font-size: 20px;
+}
+
+th {
+  margin: 100px;
+}
